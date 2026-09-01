@@ -1,4 +1,4 @@
-# Batch 18 — Linux Running Notes: 14 August 2026
+# AWS Free Tier Account Created, First EC2 Server, Basic Identity Commands -- Linux Running Notes: 14 August 
 
 **Topic: AWS Free Tier Account Created, First EC2 Server, Basic Identity Commands**
 
