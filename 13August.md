@@ -1,4 +1,4 @@
-# Batch 18 — Linux Running Notes: 13 August 2026
+ — Linux Running Notes: 13 August **Topic: Cloud vs On-Premises, Why Linux, AWS Free Tier**
 
 **Topic: Cloud vs On-Premises, Why Linux, AWS Free Tier**
 
