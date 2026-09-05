@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andhra Ruchulu | Authentic Andhra Restaurant</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fffaf4;
+            color: #2d211c;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 250, 244, 0.97);
+
+            border-bottom: 1px solid #ead8c7;
+        }
+
+        nav {
+            max-width: 1200px;
+            height: 78px;
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 29px;
+            font-weight: bold;
+            color: #a52d20;
+        }
+
+        .logo span {
+            color: #d38a22;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #3b2a22;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        nav ul a:hover {
+            color: #a52d20;
+        }
+
+        .reserve-btn {
+            text-decoration: none;
+            color: white;
+            background: #a52d20;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* ================= VISITOR MESSAGE ================= */
+
+        .welcome-message {
+            position: fixed;
+
+            left: 20px;
+            bottom: 20px;
+
+            width: 270px;
+
+            background: white;
+
+            padding: 18px 20px;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #a52d20;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+            z-index: 900;
+        }
+
+        .welcome-message h3 {
+            color: #a52d20;
+            font-family: Georgia, serif;
+            font-size: 19px;
+            margin-bottom: 6px;
+        }
+
+        .welcome-message p {
+            color: #6f6259;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            padding: 150px 8% 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 30%,
+                    #f4d9ae,
+                    transparent 35%
+                );
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .small-title {
+            display: inline-block;
+
+            background: #f7e4c9;
+            color: #a52d20;
+
+            padding: 9px 18px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+
+            font-size: 70px;
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #a52d20;
+        }
+
+        .hero p {
+            color: #70635b;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #a52d20;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #7f2017;
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            border: 1px solid #c9ad94;
+            color: #4d3930;
+        }
+
+        .secondary:hover {
+            background: #f4e4d3;
+        }
+
+        .hero-image {
+            width: 470px;
+            height: 470px;
+
+            border-radius: 50%;
+
+            background-image:
+                url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            border: 12px solid white;
+
+            box-shadow:
+                0 25px 70px rgba(70,40,20,0.22);
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+        .section-title small {
+            color: #a52d20;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-family: Georgia, serif;
+
+            font-size: 45px;
+
+            margin-top: 10px;
+        }
+
+        .section-title p {
+            color: #756961;
+
+            max-width: 650px;
+
+            margin: 15px auto;
+
+            line-height: 1.7;
+        }
+
+        /* ================= DISHES ================= */
+
+        .specials {
+            background: #f7eee5;
+        }
+
+        .cards {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 28px;
+        }
+
+        .card {
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 12px 35px rgba(60,40,20,0.09);
+
+            transition: 0.35s;
+        }
+
+        .card:hover {
+            transform: translateY(-9px);
+
+            box-shadow:
+                0 20px 45px rgba(60,40,20,0.16);
+        }
+
+        .food-image {
+            height: 235px;
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .fish {
+            background-image:
+                url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .chicken {
+            background-image:
+                url("https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .biryani {
+            background-image:
+                url("https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-family: Georgia, serif;
+
+            font-size: 23px;
+
+            margin-bottom: 9px;
+        }
+
+        .card-content p {
+            color: #756b64;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #a52d20;
+
+            font-weight: bold;
+
+            font-size: 20px;
+        }
+
+        /* ================= ANDHRA SPECIALS ================= */
+
+        .andhra-specials {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .special-item {
+            background: #fff;
+
+            border: 1px solid #eadbcf;
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            transition: 0.3s;
+        }
+
+        .special-item:hover {
+            transform: translateX(5px);
+
+            box-shadow:
+                0 8px 25px rgba(60,40,20,0.08);
+        }
+
+        .dish-icon {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+
+            background: #f7e3cf;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 28px;
+
+            flex-shrink: 0;
+        }
+
+        .special-item h3 {
+            font-family: Georgia, serif;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+        }
+
+        .special-item p {
+            color: #756b64;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .about-image {
+            height: 470px;
+
+            border-radius: 25px;
+
+            background-image:
+                url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .about-text small {
+            color: #a52d20;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .about-text h2 {
+            font-family: Georgia, serif;
+
+            font-size: 47px;
+
+            line-height: 1.1;
+
+            margin: 15px 0 22px;
+        }
+
+        .about-text p {
+            color: #756b64;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .feature {
+            background: #f7eee5;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+        }
+
+        /* ================= MENU ================= */
+
+        .menu {
+            background: #30221c;
+
+            color: white;
+        }
+
+        .menu .section-title h2 {
+            color: white;
+        }
+
+        .menu .section-title p {
+            color: #c7b9ae;
+        }
+
+        .menu-list {
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .menu-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            padding: 22px 0;
+
+            border-bottom:
+                1px solid #51433a;
+        }
+
+        .menu-item h3 {
+            font-family: Georgia, serif;
+
+            width: 32%;
+
+            color: #fff;
+        }
+
+        .menu-item p {
+            color: #bdb0a7;
+
+            flex: 1;
+
+            font-size: 14px;
+        }
+
+        .menu-price {
+            color: #e0a354;
+
+            font-size: 19px;
+
+            font-weight: bold;
+        }
+
+        /* ================= RESERVATION ================= */
+
+        .reservation {
+            text-align: center;
+
+            background: #f8eee4;
+        }
+
+        .reservation-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 60px 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 20px 60px rgba(60,40,20,0.10);
+        }
+
+        .reservation-box h2 {
+            font-family: Georgia, serif;
+
+            font-size: 43px;
+
+            margin-bottom: 15px;
+        }
+
+        .reservation-box p {
+            color: #756b64;
+
+            margin-bottom: 30px;
+        }
+
+        .contact {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 50px;
+
+            margin-top: 35px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact span {
+            display: block;
+
+            color: #a52d20;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #211712;
+
+            color: white;
+
+            padding: 55px 8% 25px;
+        }
+
+        .footer-content {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        footer h3 {
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer li {
+            color: #b7aaa1;
+
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+        }
+
+        .copyright {
+            max-width: 1150px;
+
+            margin: 40px auto 0;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid #3e332d;
+
+            text-align: center;
+
+            color: #8d8179;
+
+            font-size: 13px;
+        }
+
+        /* ================= NAME POPUP ================= */
+
+        .overlay {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background:
+                rgba(35,20,12,0.75);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 2000;
+        }
+
+        .name-box {
+            width: 90%;
+
+            max-width: 430px;
+
+            background: white;
+
+            padding: 42px 35px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.25);
+        }
+
+        .name-icon {
+            font-size: 48px;
+
+            margin-bottom: 12px;
+        }
+
+        .name-box h2 {
+            font-family: Georgia, serif;
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .name-box p {
+            color: #756b64;
+
+            margin-bottom: 25px;
+        }
+
+        .name-input {
+            width: 100%;
+
+            padding: 14px 18px;
+
+            border:
+                1px solid #d8c9bd;
+
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            outline: none;
+
+            margin-bottom: 15px;
+        }
+
+        .name-input:focus {
+            border-color: #a52d20;
+        }
+
+        .enter-btn {
+            width: 100%;
+
+            border: none;
+
+            background: #a52d20;
+
+            color: white;
+
+            padding: 14px;
+
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .enter-btn:hover {
+            background: #7f2017;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:900px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                width: 330px;
+                height: 330px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .andhra-specials {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-item {
+                flex-wrap: wrap;
+            }
+
+            .menu-item h3 {
+                width: 100%;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero {
+                padding:
+                    130px 5% 70px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero-image {
+                width: 270px;
+                height: 270px;
+            }
+
+            .welcome-message {
+                width: 240px;
+
+                left: 10px;
+                bottom: 10px;
+
+                padding: 14px;
+            }
+
+            .welcome-message h3 {
+                font-size: 17px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .reservation-box {
+                padding:
+                    39px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= VISITOR NAME POPUP ================= -->
+
+<div class="overlay" id="nameOverlay">
+
+    <div class="name-box">
+
+        <div class="name-icon">
+            🍛
+        </div>
+
+        <h2>
+            Welcome to Andhra Ruchulu
+        </h2>
+
+        <p>
+            May we know your name?
+        </p>
+
+        <input
+            type="text"
+            id="visitorName"
+            class="name-input"
+            placeholder="Enter your name"
+            maxlength="30"
+        >
+
+        <button
+            class="enter-btn"
+            onclick="welcomeVisitor()">
+
+            Enter Andhra Ruchulu
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= VISITOR MESSAGE ================= -->
+
+<div
+    class="welcome-message"
+    id="welcomeMessage">
+
+    <h3 id="welcomeText">
+        Welcome! 👋
+    </h3>
+
+    <p>
+        Thank you for visiting
+        Andhra Ruchulu ❤️
+    </p>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+		<h5>server 1</h5>
+		Andhra <span>Ruchulu</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#specials">
+                    Specials
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#menu">
+                    Menu
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <a
+            href="#contact"
+            class="reserve-btn">
+
+            Reserve Table
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section
+    class="hero"
+    id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            🌶️ AUTHENTIC ANDHRA FLAVORS
+        </div>
+
+        <h1>
+
+            Taste the
+            <span>real Andhra</span>
+            tradition.
+
+        </h1>
+
+        <p>
+
+            Welcome to Andhra Ruchulu —
+            where traditional Andhra recipes,
+            spicy flavors and homestyle cooking
+            come together on one plate.
+
+        </p>
+
+        <div class="buttons">
+
+            <a
+                href="#menu"
+                class="btn primary">
+
+                Explore Menu →
+
+            </a>
+
+            <a
+                href="#contact"
+                class="btn secondary">
+
+                Book a Table
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image"></div>
+
+</section>
+
+
+<!-- ================= FEATURED DISHES ================= -->
+
+<section
+    class="specials"
+    id="specials">
+
+    <div class="section-title">
+
+        <small>
+            Andhra Specialities
+        </small>
+
+        <h2>
+            Our Signature Dishes
+        </h2>
+
+        <p>
+
+            From spicy fish curry to
+            delicious biryani, experience
+            the authentic taste of Andhra.
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- FISH -->
+
+        <div class="card">
+
+            <div
+                class="food-image fish">
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Andhra Fish Curry
+                </h3>
+
+                <p>
+
+                    Fresh fish cooked in a
+                    traditional Andhra-style
+                    spicy tamarind gravy.
+
+                </p>
+
+                <div class="price">
+                    ₹320
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHICKEN -->
+
+        <div class="card">
+
+            <div
+                class="food-image chicken">
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Gongura Chicken
+                </h3>
+
+                <p>
+
+                    Tender chicken cooked with
+                    tangy gongura leaves and
+                    authentic Andhra spices.
+
+                </p>
+
+                <div class="price">
+                    ₹280
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BIRYANI -->
+
+        <div class="card">
+
+            <div
+                class="food-image biryani">
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Andhra Chicken Biryani
+                </h3>
+
+                <p>
+
+                    Fragrant basmati rice,
+                    tender chicken and aromatic
+                    Andhra spices.
+
+                </p>
+
+                <div class="price">
+                    ₹300
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MORE ANDHRA DISHES ================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <small>
+            From Our Kitchen
+        </small>
+
+        <h2>
+            More Andhra Favorites
+        </h2>
+
+    </div>
+
+
+    <div class="andhra-specials">
+
+
+        <div class="special-item">
+
+            <div class="dish-icon">
+                🐟
+            </div>
+
+            <div>
+
+                <h3>
+                    Royyala Iguru
+                </h3>
+
+                <p>
+                    Spicy Andhra-style
+                    prawn curry with fresh spices.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="special-item">
+
+            <div class="dish-icon">
+                🍗
+            </div>
+
+            <div>
+
+                <h3>
+                    Andhra Chicken Fry
+                </h3>
+
+                <p>
+                    Crispy chicken cooked
+                    with green chilli and spices.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="special-item">
+
+            <div class="dish-icon">
+                🍖
+            </div>
+
+            <div>
+
+                <h3>
+                    Andhra Mutton Curry
+                </h3>
+
+                <p>
+                    Slow-cooked mutton with
+                    traditional Andhra masala.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="special-item">
+
+            <div class="dish-icon">
+                🌶️
+            </div>
+
+            <div>
+
+                <h3>
+                    Gutti Vankaya
+                </h3>
+
+                <p>
+                    Baby brinjals stuffed with
+                    rich Andhra spice masala.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="special-item">
+
+            <div class="dish-icon">
+                    🍲
+            </div>
+
+            <div>
+
+                <h3>
+                    Pappu
+                </h3>
+
+                <p>
+                    Comforting Andhra dal
+                    cooked with vegetables and spices.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="special-item">
+
+            <div class="dish-icon">
+                🍚
+            </div>
+
+            <div>
+
+                <h3>
+                    Andhra Meals
+                </h3>
+
+                <p>
+                    Complete traditional meal
+                    with rice, curries, dal and pickles.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-image"></div>
+
+        <div class="about-text">
+
+            <small>
+                OUR STORY
+            </small>
+
+            <h2>
+                The taste of Andhra,
+                served with love.
+            </h2>
+
+            <p>
+
+                Andhra Ruchulu brings the
+                authentic flavors of Andhra
+                Pradesh directly to your table.
+
+            </p>
+
+            <p>
+
+                Our recipes are inspired by
+                traditional Andhra kitchens,
+                using fresh ingredients,
+                aromatic spices and generations-old
+                cooking methods.
+
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+                    🌶️ Authentic Spices
+                </div>
+
+                <div class="feature">
+                    🍚 Traditional Recipes
+                </div>
+
+                <div class="feature">
+                    ❤️ Homestyle Cooking
+                </div>
+
+                <div class="feature">
+                    ⭐ Fresh Ingredients
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section
+    class="menu"
+    id="menu">
+
+    <div class="section-title">
+
+        <small>
+            OUR MENU
+        </small>
+
+        <h2>
+            Andhra Ruchulu Menu
+        </h2>
+
+        <p>
+            Traditional dishes made fresh
+            with authentic Andhra flavors.
+        </p>
+
+    </div>
+
+
+    <div class="menu-list">
+
+
+        <div class="menu-item">
+
+            <h3>
+                Andhra Fish Curry
+            </h3>
+
+            <p>
+                Fresh fish in spicy
+                tamarind gravy.
+            </p>
+
+            <div class="menu-price">
+                ₹320
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Gongura Chicken
+            </h3>
+
+            <p>
+                Chicken with tangy
+                gongura leaves.
+            </p>
+
+            <div class="menu-price">
+                ₹280
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Andhra Chicken Fry
+            </h3>
+
+            <p>
+                Spicy crispy chicken
+                with green chilli.
+            </p>
+
+            <div class="menu-price">
+                ₹260
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Andhra Mutton Curry
+            </h3>
+
+            <p>
+                Slow-cooked mutton
+                with traditional masala.
+            </p>
+
+            <div class="menu-price">
+                ₹380
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Royyala Iguru
+            </h3>
+
+            <p>
+                Spicy Andhra-style
+                prawn curry.
+            </p>
+
+            <div class="menu-price">
+                ₹360
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Gutti Vankaya
+            </h3>
+
+            <p>
+                Stuffed baby brinjal
+                with Andhra masala.
+            </p>
+
+            <div class="menu-price">
+                ₹180
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Andhra Meals
+            </h3>
+
+            <p>
+                Rice, dal, curries,
+                pickle and traditional sides.
+            </p>
+
+            <div class="menu-price">
+                ₹220
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <h3>
+                Curd Rice
+            </h3>
+
+            <p>
+                Creamy traditional curd rice
+                with tempering.
+            </p>
+
+            <div class="menu-price">
+                ₹100
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESERVATION ================= -->
+
+<section
+    class="reservation"
+    id="contact">
+
+    <div class="reservation-box">
+
+        <h2>
+            Come Taste Andhra
+        </h2>
+
+        <p>
+
+            Bring your family and friends
+            and enjoy an authentic Andhra
+            dining experience.
+
+        </p>
+
+        <a
+            href="tel:+919876543210"
+            class="btn primary">
+
+            📞 Call +91 98765 43210
+
+        </a>
+
+
+        <div class="contact">
+
+            <div>
+
+                <span>
+                    LOCATION
+                </span>
+
+                Hyderabad, Telangana
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    OPENING HOURS
+                </span>
+
+                11:00 AM – 11:00 PM
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    EMAIL
+                </span>
+
+                hello@andhraruchulu.com
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h3>
+                Andhra Ruchulu
+            </h3>
+
+            <p>
+
+                Authentic Andhra food,
+                traditional recipes and
+                unforgettable flavors.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    Home
+                </li>
+
+                <li>
+                    Specials
+                </li>
+
+                <li>
+                    About
+                </li>
+
+                <li>
+                    Menu
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Visit Us
+            </h3>
+
+            <p>
+                Hyderabad, Telangana
+            </p>
+
+            <p>
+                Open Daily
+                <br>
+                11 AM – 11 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Andhra Ruchulu.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= VISITOR NAME SCRIPT ================= -->
+
+<script>
+
+    function welcomeVisitor() {
+
+        const nameInput =
+            document.getElementById("visitorName");
+
+        const name =
+            nameInput.value.trim();
+
+        if (name === "") {
+
+            alert(
+                "Please enter your name."
+            );
+
+            return;
+        }
+
+        localStorage.setItem(
+            "restaurantVisitorName",
+            name
+        );
+
+        showWelcome(name);
+
+    }
+
+
+    function showWelcome(name) {
+
+        document.getElementById(
+            "welcomeText"
+        ).innerHTML =
+            "Welcome, " + name + "! 👋";
+
+
+        document.getElementById(
+            "nameOverlay"
+        ).style.display =
+            "none";
+
+    }
+
+
+    window.onload = function() {
+
+        const savedName =
+            localStorage.getItem(
+                "restaurantVisitorName"
+            );
+
+
+        if (savedName) {
+
+            showWelcome(savedName);
+
+        } else {
+
+            document.getElementById(
+                "nameOverlay"
+            ).style.display =
+                "flex";
+
+        }
+
+    };
+
+</script>
+
+
+</body>
+
+</html>
